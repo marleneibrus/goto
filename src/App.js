@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Route, NavLink, Routes, HashRouter } from "react-router-dom";
 
-function App() {
+
+import Home from "./components/Home";
+import Contact from "./components/Contact";
+import "./App.css";
+
+
+class App extends Component {
+
+render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <div className="App">
+        <h1>Tutvustus</h1>
+        <h2>Marlene Ibrus</h2>
+        <ul className="header">
+          <li><NavLink to="/">Tutvustav video</NavLink></li>
+          <li><NavLink to="/contact">Kontakt</NavLink></li>
+        </ul>
+        <div className="content">
+          <Routes>
+            <Route exact path="/" element={<Home />}></Route>
+            <Route exact path="/contact" element={<Contact />}></Route>
+          </Routes>
+        </div>
+      </div>
+    </HashRouter>
   );
 }
-
+}
 export default App;
+

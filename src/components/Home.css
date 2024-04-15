@@ -1,0 +1,21 @@
+div {
+    align-items: center;
+}
+.wrapper {
+    display: flex;
+    border-radius: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 50%;
+    background-color: rgb(153, 206, 255);
+}
+
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
