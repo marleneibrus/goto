@@ -8,7 +8,7 @@ class Video extends Component {
                 <div className='player-wrapper'>
                     <ReactPlayer
                     className='react-player'
-                    url= '/videos/kass.mp4'
+                    url= '/videos/marleneibrus.mp4'
                     width='60%'
                     height='60%'
                     controls = {true}
